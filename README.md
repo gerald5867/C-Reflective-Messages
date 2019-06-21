@@ -1,5 +1,5 @@
 # C-Reflective-Messages
-A header only module to create messages that have full Informations about all their fields in C++ using template and preprocessor meta programming.
+A header only module to create messages with full reflection support.
 
 Reflective-Messages is an high performance C++ library that uses C++14 + template meta programming and preprocessor meta programming to create messages that support reflection..
 
