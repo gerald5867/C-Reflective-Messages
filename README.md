@@ -3,6 +3,8 @@ A header only module to create messages that have full Informations about all th
 
 Reflective-Messages is an high performance C++ library that uses C++14 + template meta programming and preprocessor meta programming to create messages that support reflection..
 
+##Currently Only tested under Visual Studio 2017 with C++14 Mode Unit Tests will follow.
+
 ---
 My use cases for these messages:
 * MySQL tables and rows.
