@@ -1,0 +1,9 @@
+#pragma once
+
+#define PREP_NEWLINE_FOR_DEBUGGING 1
+
+#if PREP_NEWLINE_FOR_DEBUGGING
+	#define PREP_NEWLINE DEFINE_NEW_LINE
+#else
+	#define PREP_NEWLINE
+#endif
