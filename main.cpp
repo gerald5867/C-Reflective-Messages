@@ -77,7 +77,7 @@ int main() {
 		PrintTestMessage(msg);
 	}
 
-	//if you are using the nlohmann json lib you can use my JSON Serializer/Deserializer also
-	//it works almost the same as the Binary Serializer/Deserializer
+	//the JSON Serializer/Deseriliazer uses the nlohmann JSON lib see : https://github.com/nlohmann/json
+	//It works almost the same as the Binary Serializer/Deserializer
 	return 0;
 }
