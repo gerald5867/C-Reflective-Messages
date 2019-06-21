@@ -1,8 +1,7 @@
 # C-Reflective-Messages
 A header only module to create messages that have full Informations about all their fields in C++ using template and preprocessor meta programming.
 
-Reflective-Messages is an high performance C++ library that uses C++14 + template meta programming and preprocessor meta programming to create messages that support reflection.
-For Example: Having an message with 10 different named int fields the message holds all 10 in an contiguous allowing it to memcpy all 10 ints in one go when it comes to serilization.
+Reflective-Messages is an high performance C++ library that uses C++14 + template meta programming and preprocessor meta programming to create messages that support reflection..
 
 ---
 My use cases for these messages:
@@ -15,22 +14,22 @@ Compile time is currently a little bit slow but this may change in the future.
 To improve the compile time you can use the module like this:
 
 in Message.h Change DECLMESSAGE_ALLOW_DECLARE_EXTERN_TEMPLATE to 1
-.. code:: c++
-  #ifndef DECLMESSAGE_ALLOW_DECLARE_EXTERN_TEMPLATE
-    #define DECLMESSAGE_ALLOW_DECLARE_EXTERN_TEMPLATE 1
-  #endif
-
+``` c++
+	  #ifndef DECLMESSAGE_ALLOW_DECLARE_EXTERN_TEMPLATE
+	    #define DECLMESSAGE_ALLOW_DECLARE_EXTERN_TEMPLATE 1
+	  #endif
+```
 declare the message in the header file like you normally would do : 
 
-.. code:: c++
+``` c++
   DECLMESSAGE(TestMessage,
     DECLMESSAGEFIELD(int, Age),
     DECLMESSAGEFIELD(std::string, Name),
     DECLMESSAGEFIELD(std::string, Country)
   );
-  
+ ``` 
  and do the following in the cpp file :
-.. code:: c++
+``` c++
 
   #pragma push_macro("DECLMESSAGE_ALLOW_DECLARE_EXTERN_TEMPLATE")
   #pragma push_macro("DECLMESSAGE_ALLOW_EXPLICIT_TEMPLATE_INSTANTATION")
@@ -45,12 +44,13 @@ declare the message in the header file like you normally would do :
 
   #pragma pop_macro("DECLMESSAGE_ALLOW_DECLARE_EXTERN_TEMPLATE")
   #pragma pop_macro("DECLMESSAGE_ALLOW_EXPLICIT_TEMPLATE_INSTANTATION")
-
+```
 now you have extern template in the header file an and explicit instantation in the cpp file for all messages in
 that header file automatically.
 
 The following example are also in main.cpp:
 
+``` c++
 #include <iostream>
 #include <vector>
 #include <fstream>
@@ -134,3 +134,4 @@ int main() {
 	//It works almost the same as the Binary Serializer/Deserializer
 	return 0;
 }
+```
